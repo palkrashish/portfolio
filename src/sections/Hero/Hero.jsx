@@ -1,11 +1,17 @@
 import styles from "./HeroStyles.module.css";
 import heroImg from "../../assets/hero-img.png";
-import themeIcon from "../../assets/sun.svg";
+import sun from "../../assets/sun.svg";
+import moon from "../../assets/moon.svg";
 import twitterIcon from "../../assets/twitter-light.svg";
 import githubIcon from "../../assets/github-light.svg";
 import linkedinIcon from "../../assets/linkedin-light.svg";
+import CV from "../../assets/cv.pdf";
+import { useTheme } from "../../common/ThemeContext/ThemeContext";
 
 const Hero = () => {
+  const { theme, toggleTheme } = useTheme();
+  const themeIcon = theme === 'light' ? sun : moon;
+  
   return (
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
@@ -14,6 +20,7 @@ const Hero = () => {
           className={styles.colorMode}
           src={themeIcon}
           alt="color mode icon"
+          onClick={toggleTheme}
         />
       </div>
       <div className={styles.info}>
@@ -28,6 +35,12 @@ const Hero = () => {
           </a>
           <a href="https://www.linkedin.com/in/palkrashish" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
+          </a>
+          <p className={styles.description}>
+            With a passion for developing modern React web apps.
+          </p>
+          <a href={CV} download>
+            <button className="hover">Resume</button>
           </a>
         </span>
       </div>

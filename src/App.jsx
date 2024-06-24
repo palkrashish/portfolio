@@ -1,11 +1,12 @@
-import React from 'react'
+import Hero from "./sections/Hero/Hero";
+import './App.css'
 
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <Hero />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

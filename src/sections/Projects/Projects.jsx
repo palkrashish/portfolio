@@ -1,5 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import movieimage from "../../assets/movieimage.png";
+import seomaster from "../../assets/seomaster.png";
+import emoji from "../../assets/emoji.jpg"
 import ProjectCard from "../../common/ProjectCard";
 
 const Projects = () => {
@@ -9,10 +11,22 @@ const Projects = () => {
       <div className={styles.projectsContainer}>
         <ProjectCard
           src={movieimage}
-          link="https://github.com/palkrashish/movie-search"
+          link="https://ashish-movie-search.netlify.app/"
           h3="Movie Search App"
           p="Movie details"
         />
+        <ProjectCard
+          src={seomaster}
+          link="https://ashish-project1-seomaster.netlify.app/"
+          h3="seo master"
+          p="seo page"
+        />
+        <ProjectCard
+        src={emoji}
+        link="https://stsq43.csb.app/"
+        h3="Emoji"
+        p="emoji App"
+      />
       </div>
     </section>
   );

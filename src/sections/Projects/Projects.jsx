@@ -1,6 +1,7 @@
 import styles from "./ProjectsStyles.module.css";
 import movieimage from "../../assets/movieimage.png";
 import seomaster from "../../assets/seomaster.png";
+import bccolorChange from "../..//assets/bgcolorchanger.png"
 import emoji from "../../assets/emoji.jpg"
 import ProjectCard from "../../common/ProjectCard";
 
@@ -14,6 +15,12 @@ const Projects = () => {
           link="https://ashish-movie-search.netlify.app/"
           h3="Movie Search App"
           p="Movie details"
+        />
+        <ProjectCard
+          src={bccolorChange}
+          link="https://ashish-bgc-changer.netlify.app/"
+          h3="Background Color Changer"
+          p="bg App"
         />
         <ProjectCard
           src={seomaster}

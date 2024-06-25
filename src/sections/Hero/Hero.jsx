@@ -47,7 +47,7 @@ const Hero = () => {
           With a passion for developing modern React web apps.
         </p>
         <a href={CV} download>
-          <button className="hover">Resume</button>
+          {/* <button className="hover">Resume</button> */}
         </a>
       </div>
     </section>
